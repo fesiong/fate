@@ -290,6 +290,8 @@ func (f *fateImpl) getWugeName(name chan<- *Name) (e error) {
 				return Wrap(e, "first stroke1 error")
 			}
 			fsa[l.FirstStroke1] = f1s
+		} else {
+			f1s = fsa[l.FirstStroke1]
 		}
 
 		if fsa[l.FirstStroke1] == nil {
@@ -303,6 +305,8 @@ func (f *fateImpl) getWugeName(name chan<- *Name) (e error) {
 				return Wrap(e, "first stoke2 error")
 			}
 			fsa[l.FirstStroke2] = f2s
+		} else {
+			f2s = fsa[l.FirstStroke2]
 		}
 
 		for _, f1 := range f1s {
